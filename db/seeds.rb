@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+2.times do |x|
+	user = User.create(name: Faker::Games::Pokemon.name)
+	5.times do |y|
+		Record.create(user_id: user.id, artist: Faker::Music.band, title: Faker::Music.album, year: 1990 + y, condition: Faker::Hipster.word)
+	end
+end
