@@ -1,0 +1,12 @@
+<% if @record.art.attached? %>
+  <%=image_tag(@record.art, size: "40X40") %>
+<% end %>
+<h2>
+	<ul class="detail">
+		<li>Artist: <%= link_to @record.artist, artist_path(@record.artist) %> </li> 
+		<li>Album Title: <%=@record.title %> </li> 
+		<li>Album Year: <%=@record.year %> </li>
+		<li>Album Condition: <%=@record.condition %> </li>
+	</ul> 
+</h2> 
+<h4> <%= link_to "Return to Collection", records_path %> | <%=link_to "Edit Record", edit_record_path(@record) %> | <%=link_to "Remove Record", record_path(@record), method: :delete %></h4>

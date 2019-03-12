@@ -1,0 +1,4 @@
+Artist History 
+<h2><%= @artist.first.artist %> </h2>
+<%= bar_chart @artist.group(:year).count(:id) %>
+<h4> <%= link_to "Return to Collection", records_path %> | <%= link_to "Add New Record", new_record_path %></h4>
