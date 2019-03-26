@@ -35,10 +35,6 @@ class RecordsController < ApplicationController
 	    @records = Record.all.where("user_id = ?", current_user.id)
   	end
 
-  	def artist
-  		@artist = Record.all.where(["user_id = ? and artist = ?", current_user.id, params[:artist]])
-  	end
-
   	def destroy
 	    @record = Record.find(params[:id])
 	    if @record.destroy 

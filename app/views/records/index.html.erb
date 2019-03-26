@@ -14,7 +14,7 @@
 				</td>
 				<td>
 					<ul>
-						<li>Artist: <%= link_to r.artist, artist_path(r.artist) %> </li> 
+						<li>Artist: <%= link_to r.artist, record_artist_path(r.id, r.artist) %> </li> 
 						<li> Album Title: <%=r.title %> </li> 
 						<li> Album Year: <%=r.year %> </li>
 						<li> Album Condition: <%=r.condition %> </li>

@@ -3,7 +3,7 @@
 <% end %>
 <h2>
 	<ul class="detail">
-		<li>Artist: <%= link_to @record.artist, artist_path(@record.artist) %> </li> 
+		<li>Artist: <%= link_to @record.artist, record_artist_path(@record.id, @record.artist) %> </li> 
 		<li>Album Title: <%=@record.title %> </li> 
 		<li>Album Year: <%=@record.year %> </li>
 		<li>Album Condition: <%=@record.condition %> </li>
